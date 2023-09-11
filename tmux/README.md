@@ -1,4 +1,4 @@
-# tmux_conf
+# tmux conf
 My personal tmux config
 
 ## Installation Instructions
