@@ -8,10 +8,10 @@ My workflow currently consists of [Alacritty](alacritty/README.md) + [Neovim](nv
 ```bash
 .
 ├── README.md
+├── journal.md
 ├── alacritty
 │   ├── README.md
 │   └── alacritty.yml
-├── journal.md
 ├── nvim
 │   ├── README.md
 │   ├── after
