@@ -24,8 +24,20 @@ cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 
 lsp.setup_nvim_cmp({
-    mapping = cmp_mappings
+    mapping = cmp_mappings,
+    sources = {
+        {name = 'path'},
+        {name = 'nvim_lsp', keyword_length = 1},
+        {name = 'buffer', keyword_length = 1},
+        {name = 'luasnip', keyword_length = 1},
+        -- { name = 'cmp_bootstrap', keyword_length = 1},
+    }
 })
+-- cmp.setup.filetype('html', {
+--     sources = cmp.config.sources({
+--         { name = 'cmp_bootstrap', keyword_length = 1},
+--     })
+-- })
 
 lsp.set_preferences({
     suggest_lsp_servers = true,
@@ -38,7 +50,10 @@ lsp.set_preferences({
 })
 
 lsp.on_attach(function(client, bufnr)
-    local opts = { buffer = bufnr, remap = false }
+    local opts = {
+        buffer = bufnr,
+        remap = false,
+    }
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)

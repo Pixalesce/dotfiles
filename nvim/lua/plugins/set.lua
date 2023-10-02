@@ -20,6 +20,7 @@ vim.opt.undofile = true
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.spell = true
 
 vim.opt.termguicolors = true
 vim.opt.foldmethod = "indent"
@@ -27,7 +28,7 @@ vim.opt.foldnestmax = 10
 vim.opt.foldlevel = 2
 vim.opt.foldlevelstart = 99
 
-vim.opt.nrformats = "alpha"
+-- vim.opt.nrformats = {"alpha", "bin", "octal", "hex"}
 
 vim.opt.scrolloff = 7
 vim.opt.signcolumn = "yes"
@@ -35,36 +36,13 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-local function git_branch()
-    local branch = vim.fn.system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-    if string.len(branch) > 0 then
-        return branch
-    else
-        return ":"
-    end
-end
-
-local function statusline()
-    local set_color = "%#Pmenu#"
-    local file_name = " %f"
-    local modified = "%m"
-    local align_right = "%="
-    -- local fileencoding = " %{&fileencoding?&fileencoding:&encoding}"
-    -- local fileformat = " [%{&fileformat}]"
-    local filetype = " %y"
-    local percentage = " %p%%"
-    local linecol = " %l:%c"
-
-    return string.format(
-        "  ❡ %s%s%s%s%s%s%s",
-        set_color,
-        file_name,
-        modified,
-        align_right,
-        filetype,
-        percentage,
-        linecol
-    )
-end
-
-vim.opt.statusline = statusline()
+-- vim.api.nvim_create_autocmd("LspAttach", {
+--     group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+--     callback = function(args)
+--         local client = vim.lsp.get_client_by_id(args.data.client_id)
+--         if client.server_capabilities.inlayHintProvider then
+--             vim.lsp.inlay_hint(args.buf, true)
+--         end
+--         -- whatever other lsp config you want
+--     end
+-- })

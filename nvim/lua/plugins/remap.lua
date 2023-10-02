@@ -34,9 +34,9 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader><leader>", function()
-  vim.cmd("so")
-end)
+-- vim.keymap.set("n", "<leader><leader>", function()
+--   vim.cmd("so")
+-- end)
 -- va
 
 -- my personal key remaps
@@ -65,4 +65,6 @@ vim.keymap.set("n", "<leader>r", "<cmd>bd | e#<CR>")
 vim.keymap.set("n", "<leader>c", "<cmd>%bd | e#<CR>")
 
 -- save faster
-vim.keymap.set("n", "<C-x><C-s>", ":w<Return>")
+-- vim.keymap.set("n", "<leader>w", ":w<Return>")
+
+vim.keymap.set("n", "<leader>h", function() vim.lsp.inlay_hint(0, true) end)

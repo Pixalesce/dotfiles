@@ -32,14 +32,8 @@ local plugins = {
     'theprimeagen/harpoon',
     -- undotree
     'mbbill/undotree',
-    -- file tree
-    'nvim-tree/nvim-tree.lua',
-    -- icons
-    'ryanoasis/vim-devicons',
     -- html colours
     'NvChad/nvim-colorizer.lua',
-    -- -- multi-cursor
-    -- use 'mg979/vim-visual-multi'
     -- commenting tool
     'tpope/vim-commentary',
     -- colour schemes
@@ -51,38 +45,58 @@ local plugins = {
             vim.cmd('colorscheme catppuccin')
         end
     },
+    {
+        'rose-pine/nvim',
+        name = 'rose-pine'
+    },
     -- autocompletion
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
         dependencies = {
-          -- LSP Support
-          {'neovim/nvim-lspconfig'},             -- Required
-          {                                      -- Optional
-            'williamboman/mason.nvim',
-            build = function()
-              vim.cmd ('MasonUpdate')
-            end,
-          },
-          {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},             -- Required
+            {                                      -- Optional
+              'williamboman/mason.nvim',
+              build = function()
+                vim.cmd ('MasonUpdate')
+              end,
+            },
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-          -- Autocompletion
-          {'hrsh7th/nvim-cmp'},     -- Required
-          {'hrsh7th/cmp-nvim-lsp'}, -- Required
-          {'L3MON4D3/LuaSnip'},     -- Required
-          {'rafamadriz/friendly-snippets'},
-          {'saadparwaiz1/cmp_luasnip'},
-          {'hrsh7th/cmp-buffer'},
-          {'uga-rosa/cmp-dictionary'},
-          {'rambhosale/cmp-bootstrap.nvim'},
-       }
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'L3MON4D3/LuaSnip'},     -- Required
+            {'rafamadriz/friendly-snippets'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-buffer'},
+            {'uga-rosa/cmp-dictionary'},
+            {'rambhosale/cmp-bootstrap.nvim'},
+        }
     },
-    -- rust LSP
-    'simrat39/rust-tools.nvim',
     -- git plugin
     'tpope/vim-fugitive',
     -- highlighting
     "folke/trouble.nvim",
+    -- autopair
+    -- {
+        --    'altermo/ultimate-autopair.nvim',
+        --    event={'InsertEnter','CmdlineEnter'},
+        --    branch='v0.6',
+    -- },
+    -- statusline
+    'nvim-lualine/lualine.nvim',
+    -- UI improvements
+    -- {
+        --    "folke/noice.nvim",
+        --    event = "VeryLazy",
+        --    opts = { },
+        --    dependencies = {
+            --    "MunifTanjim/nui.nvim",
+            --    "rcarriga/nvim-notify",
+        --    }
+    -- },
 }
 
 local opts = {}
