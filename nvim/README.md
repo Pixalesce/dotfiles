@@ -28,6 +28,7 @@ Enjoy Vimming!
         ├── fugitive.lua
         ├── harpoon.lua
         ├── lsp.lua
+        ├── lualine.lua
         ├── telescope.lua
         ├── treesitter.lua
         ├── treesitter-context.lua
@@ -55,10 +56,10 @@ Custom settings
 Each individual `.lua` file contains custom settings for the various packages. Same thing if you install new packages.
 
 ## Resources
+[0 to LSP: Neovim RC From Scratch](https://www.youtube.com/watch?v=w7i4amO_zaE&pp=ygUIMCB0byBsc3A%3D)
+
 [Migrate from Packer to lazy.nvim](https://www.youtube.com/watch?v=cGZdvEIeiSg)
 
 [Build your own Vim statusline](https://shapeshed.com/vim-statuslines/)
-
-[0 to LSP: Neovim RC From Scratch](https://www.youtube.com/watch?v=w7i4amO_zaE&pp=ygUIMCB0byBsc3A%3D)
 
 [Neovim docs](https://neovim.io/doc/)
