@@ -32,8 +32,6 @@ local plugins = {
     'theprimeagen/harpoon',
     -- undotree
     'mbbill/undotree',
-    -- html colours
-    'NvChad/nvim-colorizer.lua',
     -- commenting tool
     'tpope/vim-commentary',
     -- colour schemes
@@ -44,10 +42,6 @@ local plugins = {
         config = function()
             vim.cmd('colorscheme catppuccin')
         end
-    },
-    {
-        'rose-pine/nvim',
-        name = 'rose-pine'
     },
     -- autocompletion
     {
@@ -79,24 +73,8 @@ local plugins = {
     'tpope/vim-fugitive',
     -- highlighting
     "folke/trouble.nvim",
-    -- autopair
-    -- {
-        --    'altermo/ultimate-autopair.nvim',
-        --    event={'InsertEnter','CmdlineEnter'},
-        --    branch='v0.6',
-    -- },
     -- statusline
     'nvim-lualine/lualine.nvim',
-    -- UI improvements
-    -- {
-        --    "folke/noice.nvim",
-        --    event = "VeryLazy",
-        --    opts = { },
-        --    dependencies = {
-            --    "MunifTanjim/nui.nvim",
-            --    "rcarriga/nvim-notify",
-        --    }
-    -- },
 }
 
 local opts = {}
