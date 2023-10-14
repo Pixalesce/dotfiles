@@ -44,31 +44,27 @@ local plugins = {
         end
     },
     -- autocompletion
+        -- LSP
     {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        dependencies = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
-              'williamboman/mason.nvim',
-              build = function()
-                vim.cmd ('MasonUpdate')
-              end,
-            },
-            {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},     -- Required
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
-            {'L3MON4D3/LuaSnip'},     -- Required
-            {'rafamadriz/friendly-snippets'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-buffer'},
-            {'uga-rosa/cmp-dictionary'},
-            {'rambhosale/cmp-bootstrap.nvim'},
-        }
+        'williamboman/mason.nvim',
+        build = function()
+            vim.cmd ('MasonUpdate')
+        end,
     },
+    {'williamboman/mason-lspconfig.nvim'},
+    { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
+    {'neovim/nvim-lspconfig'},  -- Required
+    {'hrsh7th/nvim-cmp'},       -- Required
+    {'hrsh7th/cmp-nvim-lsp'},   -- Required
+    {
+        'L3MON4D3/LuaSnip',
+        version = "<CurrentMajor>",
+    },       -- Required
+    {'rafamadriz/friendly-snippets'},
+    {'saadparwaiz1/cmp_luasnip'},
+    {'hrsh7th/cmp-nvim-lsp-signature-help'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
     -- git plugin
     'tpope/vim-fugitive',
     -- highlighting
