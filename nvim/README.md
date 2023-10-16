@@ -2,7 +2,7 @@
 This config uses a cousin of Vim known as [NeoVim](https://github.com/neovim/neovim), and would require an additional installation compared to using the built-in Vim editor. NeoVim was chosen as its plugin system is easier to use, among other things.
 
 ## Installation Instructions
-1. Install [NeoVim](https://github.com/neovim/neovim)
+1. Install [NeoVim](https://github.com/neovim/neovim#install-from-package)
 2. Clone this repo using ```git clone https://github.com/Pixalesce/nVim_config ~/.config/nvim```
 3. Open NeoVim (```nvim``` in the terminal)
 
@@ -24,13 +24,12 @@ Enjoy Vimming!
 │        └── set.lua
 └── after
     └── plugin
-        ├── colors.lua
-        ├── fugitive.lua
-        ├── harpoon.lua
-        ├── lsp.lua
-        ├── lualine.lua
-        ├── telescope.lua
-        ├── treesitter.lua
+        ├── fugitive.lua (git wrapper)
+        ├── harpoon.lua (quick indexing and switching between files)
+        ├── lsp.lua (code autocomplete and diagnostics)
+        ├── lualine.lua (status line)
+        ├── telescope.lua (quick file searching)
+        ├── treesitter.lua (syntax highlighting)
         ├── treesitter-context.lua
         ├── trouble.lua
         └── undotree.lua
@@ -47,7 +46,7 @@ Location where you install packages. The start point to your plugins.
 See [Lazy.nvim](https://github.com/folke/lazy.nvim).
 
 #### remap.lua
-Custom keybindings
+Custom keybindings 
 
 #### set.lua
 Custom settings
