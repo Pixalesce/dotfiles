@@ -71,6 +71,8 @@ local plugins = {
     "folke/trouble.nvim",
     -- statusline
     'nvim-lualine/lualine.nvim',
+    -- jumping
+    'unblevable/quick-scope'
 }
 
 local opts = {}
