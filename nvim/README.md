@@ -7,58 +7,73 @@ This config uses a cousin of Vim known as [NeoVim](https://github.com/neovim/neo
 3. Open NeoVim (```nvim``` in the terminal)
 
 Enjoy Vimming!
+
 ### Notes
-- Requires NeoVim 0.7.x
+- Requires NeoVim 0.10.x
 - Checkout ```remap.lua``` for custom key bindings
+- See also plugin configuration files in `config/plugin/` that might have individual keybindings defined
 
 ## Directory Tree
 ``` bash
 .
 ├── README.md
 ├── init.lua
-├── lua
-│   └── plugins
-│        ├── init.lua
-│        ├── lazy.lua
-│        ├── remap.lua
-│        └── set.lua
-└── after
-    └── plugin
-        ├── fugitive.lua (git wrapper)
-        ├── harpoon.lua (quick indexing and switching between files)
-        ├── lsp.lua (code autocomplete and diagnostics)
-        ├── lualine.lua (status line)
-        ├── telescope.lua (quick file searching)
-        ├── treesitter.lua (syntax highlighting)
-        ├── treesitter-context.lua
-        ├── trouble.lua
-        └── undotree.lua
+├── after
+│   └── ftplugin
+│       └── lua.lua
+└── lua
+    ├── opts.lua
+    ├── remap.lua
+    └── config
+        ├── lazy.lua
+        ├── plugins
+        │   ├── blink.lua
+        │   ├── catppuccin.lua
+        │   ├── diffview.lua
+        │   ├── fugitive.lua
+        │   ├── gitsigns.lua
+        │   ├── harpoon.lua
+        │   ├── lsp.lua
+        │   ├── lualine.lua
+        │   ├── mason.lua
+        │   ├── mini.lua
+        │   ├── oil.lua
+        │   ├── telescope.lua
+        │   ├── treesitter-context.lua
+        │   ├── treesitter.lua
+        │   ├── undotree.lua
+        │   └── whichkey.lua
+        └── telescope
+            └── multigrep.lua
 ```
 
 ## Breakdown
-### lua/plugins/
+### root
 #### init.lua
-This file tells nvim where to go to get plugin information
+Initialisation file informing nvim of files to source to load configuration
 
-#### lazy.lua
-Location where you install packages. The start point to your plugins.
-
-See [Lazy.nvim](https://github.com/folke/lazy.nvim).
+### lua
+#### opts.lua
+Custom settings
 
 #### remap.lua
 Custom keybindings 
 
-#### set.lua
-Custom settings
+### lua/config
+#### lazy.lua
+Simple initialisation and installation of `Lazy` plugin manager
 
-### after/plugin
-Each individual `.lua` file contains custom settings for the various packages. Same thing if you install new packages.
+See [Lazy.nvim](https://github.com/folke/lazy.nvim)
+
+### lua/config/plugins
+Each individual `.lua` file contains details of the plugin being installed, as well as configuration options
+
+### after/ftplugin (file type plugin!)
+#### lua.lua
+Defining Lua specific options; similar files can be made for other languages as well
 
 ## Resources
-[0 to LSP: Neovim RC From Scratch](https://www.youtube.com/watch?v=w7i4amO_zaE&pp=ygUIMCB0byBsc3A%3D)
-
-[Migrate from Packer to lazy.nvim](https://www.youtube.com/watch?v=cGZdvEIeiSg)
-
-[Build your own Vim statusline](https://shapeshed.com/vim-statuslines/)
-
-[Neovim docs](https://neovim.io/doc/)
+`:help`  
+[Neovim docs](https://neovim.io/doc/)  
+[0 to LSP: Neovim RC From Scratch](https://www.youtube.com/watch?v=w7i4amO_zaE&pp=ygUIMCB0byBsc3A%3D)  
+[Advent of Neovim](https://www.youtube.com/watch?v=TQn2hJeHQbM&list=PLep05UYkc6wTyBe7kPjQFWVXTlhKeQejM)  
