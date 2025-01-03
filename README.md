@@ -3,36 +3,46 @@ Over time as I have been tinkering around with various command line centric appl
 
 See [Journal](journal.md) to read my story ✨
 # Workflow
-My workflow currently consists of [Alacritty](alacritty/README.md) + [Neovim](nvim/README.md) + [Tmux](tmux/README.md).
+My workflow currently consists of [Ghostty](ghostty/README.md) + [Neovim](nvim/README.md) + [Tmux](tmux/README.md).
 
 # Directory Tree
 ```bash
 .
 ├── README.md
 ├── journal.md
-├── alacritty
+├── ghostty
 │   ├── README.md
-│   └── alacritty.yml
+│   └── config
 ├── nvim
 │   ├── README.md
-│   ├── after
-│   │   └── plugin
-│   │       ├── colors.lua
-│   │       ├── fugitive.lua
-│   │       ├── harpoon.lua
-│   │       ├── lsp.lua
-│   │       ├── telescope.lua
-│   │       ├── treesitter-context.lua
-│   │       ├── treesitter.lua
-│   │       ├── trouble.lua
-│   │       └── undotree.lua
 │   ├── init.lua
+│   ├── after
+│   │   └── ftplugin
+│   │       └── lua.lua
 │   └── lua
-│       └── plugins
-│           ├── init.lua
-│           ├── lazy.lua
-│           ├── remap.lua
-│           └── set.lua
+│       ├── opts.lua
+│       ├── remap.lua
+│       └── config
+│           ├── lazy.lua
+│           ├── plugins
+│           │   ├── blink.lua
+│           │   ├── catppuccin.lua
+│           │   ├── diffview.lua
+│           │   ├── fugitive.lua
+│           │   ├── gitsigns.lua
+│           │   ├── harpoon.lua
+│           │   ├── lsp.lua
+│           │   ├── lualine.lua
+│           │   ├── mason.lua
+│           │   ├── mini.lua
+│           │   ├── oil.lua
+│           │   ├── telescope.lua
+│           │   ├── treesitter-context.lua
+│           │   ├── treesitter.lua
+│           │   ├── undotree.lua
+│           │   └── whichkey.lua
+│           └── telescope
+│               └── multigrep.lua
 └── tmux
     ├── README.md
     └── tmux.conf
