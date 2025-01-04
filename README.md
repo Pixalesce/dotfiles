@@ -1,7 +1,7 @@
 # Pix dotfiles
 Over time as I have been tinkering around with various command line centric applications, the number of configuration files I have to maintain gradually increased. As such, I have decided to bring my dotfiles and configurations into a single repo to save me from maintaining multiple repos.
 
-See [Journal](journal/the-beginning.md) to read my stories and progress with these technologies over the years ✨
+See [Journal](journal/my-journey.md) to read my stories and progress with these technologies over the years ✨
 # Workflow
 My workflow currently consists of [Ghostty](ghostty/README.md) + [Neovim](nvim/README.md) + [Tmux](tmux/README.md).
 
@@ -10,7 +10,7 @@ My workflow currently consists of [Ghostty](ghostty/README.md) + [Neovim](nvim/R
 .
 ├── README.md
 ├── journal
-│   ├── the-beginning.md
+│   ├── my-journey.md
 │   └── 18-months-on.md
 ├── ghostty
 │   ├── README.md
