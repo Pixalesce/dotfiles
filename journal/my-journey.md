@@ -6,7 +6,7 @@ My seeds of my foray into productivity were planted in the my early university d
 This got me wondering, "[Emacs](https://www.gnu.org/software/emacs/)? What is that?" As a relatively fresh face in the realm of programming, I excitedly downloaded the editor and got playing with it. It had a fabulous tutorial, teaching about the basic movements in Emacs, using windows and buffers, and much more. While moving around with `<C-f>` and `<C-b>` felt reasonable, more advanced features that utilise the `<Meta>` key felt incredibly uncomfortable, having to twist my hand to get my pinky where it needed to go. However, I was excited. I had something new, something "that the pros were using". If this is what the authors of a book used, it can't be anything bad right? A brief conversation with McNaBry also revealed that his university was teaching students [Vim](https://www.vim.org/), another editor with roots from the 80s. Deciding to take the opposing route from him so that we'll have a diverse perspective, I put my head down and continued with the Emacs built-in tutorial.
 
 That was the case until a few days later when I decided to do a little more research into this cool new application I was using. Not only could I use Emacs from either the command line or the GUI, I was also greeted by the various Emacs distros from [Prelude](https://github.com/bbatsov/prelude) and [Graphene](https://github.com/rdallasgray/graphene), to [Doom Emacs](https://github.com/doomemacs/doomemacs) and [Spacemacs](https://www.spacemacs.org/). The powers of vast extensibility and customisability that it gifted its users enticed me. I wanted all that and more. A beautiful interface, a personalised custom dashboard with my commonly used files a click a way, and even the ability to browse the web and respond to emails from within Emacs. Wouldn't it be great to have almost all the functionality I would need in a single application on my computer? Yet, this was also a daunting time as I stared at everything in front of me. Classes, clubs and new communities. Do I really have the capacity to learn the basics of python while learning a new editor? Which distribution of Emacs do I choose? There were too many questions to be answered, and I chose the most rational decision at that point in time -- use [VS Code](https://code.visualstudio.com/).
-![Vanilla Emacs tutorial](./screenshots/emacs_screen.png)
+![Vanilla Emacs tutorial](../screenshots/emacs_screen.png)
 *Vanilla Emacs Tutorial*
 ## Visual Studio
 At this point, I was about 3 weeks into my classes, and have slowly gotten comfortable in VS Code. It is an incredible piece of software, fully featured with a host of plugins that extends features of the application to almost anything that I needed or wanted. While learning how to do conditionals, the thought of Emacs was always at the back of my mind, wondering if these features that I have gotten so comfortable with in VS Code will be possible in it. Especially after watching [Fireship](https://github.com/fireship-io)'s video on [25 VS Code Productivity Tips and Speed Hacks](https://www.youtube.com/watch?v=ifTF3ags0XI), I was convinced that this is the best text editor for every programmer. Multi cursor allowed for quick and edits over multiple lines, a command palette that allowed me to manage functionality of VS Code, and an integrated terminal that allowed me to run my python code from within the application itself. Is this not what I was looking for? VS Code indeed fit the bill an editor that could perform the functionality of multiple applications in one, while providing a pleasing aesthetic.
@@ -15,7 +15,7 @@ Yet, this line from Fireship's video stuck with me.
 >You don't have to go crazy and learn something like Vim or Emacs
 
 Are Vim and Emacs really only for *crazy* people?
-![VS Code](./screenshots/vsc_screen.png)
+![VS Code](../screenshots/vsc_screen.png)
 *My VS Code layout*
 ## Emacs
 ### Doom
@@ -26,13 +26,13 @@ The first few days of using Doom was difficult, having to scan through the multi
 I needed to configure Emacs for myself.
 ### [Pixa Emacs](https://github.com/Pixalesce/Pixa_Emacs)
 Following SystemCrafters's [Emacs from Scratch](https://systemcrafters.net/emacs-from-scratch/), I gradually built up my configuration, learning the invaluable skill of reading documentation, and building my patience as I struggled with [Emacs Lisp](https://www.emacswiki.org/emacs/LearnEmacsLisp), a dialect of the [Lisp](https://lisp-lang.org/) programming language, and my lack of experience in configuring an editor. It look me the better part of two weeks, but after trawling through the depths of [Reddit](https://www.reddit.com/r/emacs/) and [Emacs Stack Exchange](https://emacs.stackexchange.com/), Pixa Emacs finally reached infancy. I had all the basics of a text editor, from syntax highlighting to LSP, and even an incredibly useful [Git](https://git-scm.com/) interface via [Magit](https://github.com/magit/magit). I was incredibly pleased.
-![Emacs Dashboard](./screenshots/emacs_dashboard.png)
+![Emacs Dashboard](../screenshots/emacs_dashboard.png)
 *Emacs dashboard*
-![Emacs Editor](./screenshots/emacs_editor.png)
+![Emacs Editor](../screenshots/emacs_editor.png)
 *Editing files in Emacs*
 
 As any Emacs user, I then spent the rest of the month exploring [Org Mode](https://orgmode.org/), a note taking system within Emacs itself. Together with [Org-babel](https://orgmode.org/worg/org-contrib/babel/), I could write my notes for school with executable code blocks, a functionality that not even [Notion](https://www.notion.so/) provides. The fact that I could write code my Org notes and have them extracted out into another code file via [Org-babel-tangle](https://orgmode.org/manual/Extracting-Source-Code.html) absolutely blew me away. I thought that I had the epitome of text editors under my fingertips, and anything was possible if I put in the effort to learn how to extend Emacs, and even had an entire roadmap written out for the features I would like to include in my Emacs configuration such as an [Org-Roam](https://www.orgroam.com/) [Zettelkasten](https://zettelkasten.de/) and an email client.
-![Org Mode](./screenshots/org_mode.png)
+![Org Mode](../screenshots/org_mode.png)
 *Emacs org mode*
 >With Emacs, the sky is the limit for what you can do.
 
@@ -51,17 +51,17 @@ As my usage of Neovim matured, I increasingly began to appreciate the productivi
 >jumping around files using telescope increases familiarity with a code base!
 ## [iTerm2](https://iterm2.com/)
 Along with my movement into the terminal, I craved an enhanced experience there too. The default Macbook terminal is functional, but doesn't provide the breadth of customisability that I have grown so accustomed to. Drawing insight from [How To Make Your Boring Mac Terminal So Much Better](https://www.youtube.com/watch?v=CF1tMjvHDRA) by [Josean Martinez](https://www.youtube.com/@joseanmartinez), I installed iTerm2 and began tinkering. I customised the prompt, keybindings for managing multiple terminal instances, and shortcuts for various actions. It was glorious.
-![iTerm2 Aesthetic](./screenshots/iterm2.png)
+![iTerm2 Aesthetic](../screenshots/iterm2.png)
 *iTerm2 look and feel*
 ## [Alacritty](https://alacritty.org/)
 If there was one thing that iTerm lacked, it was the fact that it is a Mac-only application. As nice as it was to use, I kept wondering about what a similar set up would look like on Linux. My exploration for a preferred terminal emulator has begun. My search eventually boiled down to these two options -- [Kitty](https://github.com/kovidgoyal/kitty), and Alacritty. Both are highly configurable, runs on MacOS and Linux, and are GPU accelerated. (Kitty even has a graphics protocol allowing users to view images right from the terminal!) Yet, it was this feature richness that drew me over to Alacritty. It was sleek, minimal, and had only what I needed. Configuring Alacritty was also much simpler, as its fewer options meant a smaller config file.
-![Alacritty Aesthetic](./screenshots/alacritty.png)
+![Alacritty Aesthetic](../screenshots/alacritty.png)
 *Alacritty look and feel*
 ## Terminal Multiplexing
 Unfortunately for me, the switch over to Alacritty meant that I no longer had built-in functionality of managing multiple terminal instances, resulting in me having to either (1) close Neovim, run my code, remember the any warnings or errors I'm getting, before reopening Neovim to make the necessary edits, or (2) open another instance of Alacritty as a separate window and navigate between the two instances with my mouse. Neither of these methods were intuitive, and left a sour taste as I had to take my hands off the keyboard just to perform an action as simple as moving to the neighbouring window, an action that I have gotten to comfortable with within Neovim via `<C-w>{hjkl}`.
 
 Just as I thought that I had hit a dead end, I was introduced to [tmux](https://github.com/tmux/tmux) in [My Developer Workflow - How I use i3, tmux, and vim](https://www.youtube.com/watch?v=bdumjiHabhQ), another video by ThePrimeagen. My eyes were opened. Almost immediately, I downloaded tmux and exploring its features and quirks. Oh, how good if felt to be able to have a separate window with a new terminal instance that I could navigate to with just the keyboard! Not only that, having persistent terminal sessions was something I didn't know I needed, but is something I definitely cannot live without now.
-![tmux Aesthetic](./screenshots/tmux.png)
+![tmux Aesthetic](../screenshots/tmux.png)
 *tmux look and feel*
 ## Window Manager
 The beauty of the productivity mindset is that it permeates into every aspect of your workflow. At the point in time when I moved to use Alacritty as my terminal emulator, I was using [Rectangle](https://rectangleapp.com/) to power shortcuts for managing the size and position of windows on my screen, and was pretty much content with it. With a few keystrokes, I could resize my screen to half, or even a third or two thirds of my screen, and position it at will. However, it had a core functionality missing. I could not easily switch between windows by manner of keystrokes. It was an action that had become deeply ingrained in me by this point in time through my usage of Neovim and tmux, and it was sorely missed in my day to day use of my computer. I needed a gem to brighten up this space of my workflow.

@@ -1,75 +1,94 @@
-# My Journey
-## Genesis
-My seeds of my foray into productivity were planted in the my early university days, when my good friend, [McNaBry](https://github.com/McNaBry) introduced to me to [Structure and Interpretation of Computer Programs](https://mitpress.mit.edu/9780262510875/structure-and-interpretation-of-computer-programs/), by Harold Abelson and Gerald Jay Sussman with Julie Sussman. In their introduction to Unofficial Texinfo Format, there lay a curious statement
->You are probably reading it in an Info hypertext browser, such as the Info mode of Emacs.
+# 18 Months On
+## My Experience Thus Far
+In a whirlwind of many activities, it has been a year and a half since I began my journey and adoption of Neovim as my daily driver.
+As 2025 begins, I wanted to take some time and reflect on the impact that this simple tool has had on my workflows and some challenges that I have faced in my usage of it.
 
-This got me wondering, "[Emacs](https://www.gnu.org/software/emacs/)? What is that?" As a relatively fresh face in the realm of programming, I excitedly downloaded the editor and got playing with it. It had a fabulous tutorial, teaching about the basic movements in Emacs, using windows and buffers, and much more. While moving around with `<C-f>` and `<C-b>` felt reasonable, more advanced features that utilise the `<Meta>` key felt incredibly uncomfortable, having to twist my hand to get my pinky where it needed to go. However, I was excited. I had something new, something "that the pros were using". If this is what the authors of a book used, it can't be anything bad right? A brief conversation with McNaBry also revealed that his university was teaching students [Vim](https://www.vim.org/), another editor with roots from the 80s. Deciding to take the opposing route from him so that we'll have a diverse perspective, I put my head down and continued with the Emacs built-in tutorial.
+### Neovim, a lifestyle choice
+#### [Obsidian](https://obsidian.md/)
+For better or worse, Vim motions has since been the default way that I think and interact with my computer, influencing both setup and application choices.
+Picking out a note taking app, for example, used to be a simple endeavour for me, where I would go with the app that provided me with the greatest wealth of features and a nice interface.
+[Notion](https://www.notion.so/) fit the bill perfectly for me at one point in time, boasting an extremely pleasant UI with an (in my opinion) unmatched ability to collaborate and share notes with other users.
+However, learning a different set of shortcuts and keystrokes to control and move text around the screen was not the most pleasant experience, as I constantly find myself hitting the wrong keys by instinct even after using the application for a few months.
+That may very well be my own personal limit in learning multiple tools, but it was a strong push factor nonetheless.
+Another possible option I had was [Org Mode](https://orgmode.org/) in [Emacs](https://www.gnu.org/software/emacs/), given that I have previously set up a pleasant working system, but I figured that it would be impractical for me to maintain another editor with a differing philosophy just to fulfil the need of taking notes and managing a to-do list.
 
-That was the case until a few days later when I decided to do a little more research into this cool new application I was using. Not only could I use Emacs from either the command line or the GUI, I was also greeted by the various Emacs distros from [Prelude](https://github.com/bbatsov/prelude) and [Graphene](https://github.com/rdallasgray/graphene), to [Doom Emacs](https://github.com/doomemacs/doomemacs) and [Spacemacs](https://www.spacemacs.org/). The powers of vast extensibility and customisability that it gifted its users enticed me. I wanted all that and more. A beautiful interface, a personalised custom dashboard with my commonly used files a click a way, and even the ability to browse the web and respond to emails from within Emacs. Wouldn't it be great to have almost all the functionality I would need in a single application on my computer? Yet, this was also a daunting time as I stared at everything in front of me. Classes, clubs and new communities. Do I really have the capacity to learn the basics of python while learning a new editor? Which distribution of Emacs do I choose? There were too many questions to be answered, and I chose the most rational decision at that point in time -- use [VS Code](https://code.visualstudio.com/).
-![Vanilla Emacs tutorial](./screenshots/emacs_screen.png)
-*Vanilla Emacs Tutorial*
-## Visual Studio
-At this point, I was about 3 weeks into my classes, and have slowly gotten comfortable in VS Code. It is an incredible piece of software, fully featured with a host of plugins that extends features of the application to almost anything that I needed or wanted. While learning how to do conditionals, the thought of Emacs was always at the back of my mind, wondering if these features that I have gotten so comfortable with in VS Code will be possible in it. Especially after watching [Fireship](https://github.com/fireship-io)'s video on [25 VS Code Productivity Tips and Speed Hacks](https://www.youtube.com/watch?v=ifTF3ags0XI), I was convinced that this is the best text editor for every programmer. Multi cursor allowed for quick and edits over multiple lines, a command palette that allowed me to manage functionality of VS Code, and an integrated terminal that allowed me to run my python code from within the application itself. Is this not what I was looking for? VS Code indeed fit the bill an editor that could perform the functionality of multiple applications in one, while providing a pleasing aesthetic.
+Thankfully, I found the perfect note taking application for me -- *Obsidian*. Not only does it support the use of Vim motions (Vim motions are keyboard-driven instructions to move the cursor through text), but it also allows me to have full ownership over all the notes that I take.
+With Obsidian, each note is a simple markdown file stored locally on my computer that can be backed up and synced via the cloud.
+Such control gives me confidence that my notes will always be accessible as long as I have my devices on hand, having much lower risk being unable to access my notes when lacking connectivity or a potential data failure wiping my information.
+Another perk of my notes being stored as plain markdown files is that I can use any editor of my choice to edit my notes -- Neovim! I get the best of all worlds, using a comfortable and customisable editor, while having the enhanced markdown rendering features that Obsidian provides, including exporting my notes to pdf for sharing! As an aside, Neovim with [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) has wonderful syntax highlighting for markdown as well!
+>Neovim is a *text* editor, not just a programming tool
 
-Yet, this line from Fireship's video stuck with me. 
->You don't have to go crazy and learn something like Vim or Emacs
+![Obsidian](../screenshots/obsidian.png)
+*Viewing markdown in Obsidian*
+![Editing Markdown](../screenshots/nvim_note.png)
+*Editing markdown in Neovim*
 
-Are Vim and Emacs really only for *crazy* people?
-![VS Code](./screenshots/vsc_screen.png)
-*My VS Code layout*
-## Emacs
-### Doom
-It took a while, but the perfect storm of time, freedom, and the desire to explore my developer environment eventually came. Summer holidays arrived. Like a moth to a flame, I dived head first into the deep end, watching video after video about Emacs, such as [Distrotube](https://www.youtube.com/@DistroTube)'s [Doom Emacs For Noobs](https://www.youtube.com/watch?v=iab2z21cRqA) and [The Absolute Beginner's Guide to Emacs](https://www.youtube.com/watch?v=48JlgiBpw_I) by [System Crafters](https://www.youtube.com/@SystemCrafters). I used Doom Emacs for about a week, enamoured by all its built-in features and simplicity in setting up. It was a sandbox of features that could be toggled on and off simply but removing comments on a line of code in the configuration file. It provided [LSP](https://emacs-lsp.github.io/lsp-mode/) support for code completion and diagnostics (finding out the feature that was providing me sweet sweet code completions in VS Code was an amazing experience), [which-key](https://github.com/justbur/emacs-which-key) for guidance on keyboard shortcuts and functionalities, and of course, Vim motions.
+#### Keyboard Ergonomics
+Another shift in mindset I had is toward using more efficient keystrokes, being able to hit all my commonly used shortcuts without excessive movements of my hands.
+The greatest shift I made was moving the `control` key to where `caps lock` sits on my keyboard, right under my pinky.
+Considering the massive number of keystrokes in Neovim that hinges on the control key, this was a life changer as I no longer had to twist and shift my hand to access such a commonly used key.
+(Yes, that led me to consider getting an ergo keyboard too, but that is a story for another day)
 
-The first few days of using Doom was difficult, having to scan through the multitude of keybindings that came built-in to figure out the best ones to use, but as I got more familiar, working in Doom gradually became enjoyable. Yet, I never could escape the feeling that I was a stranger in someone else's home, exploring and learning the "Doom way" of using Emacs. If I were to use Emacs on a long term basis, I wanted it to be catered specifically to me. I wanted ownership of my environment.
+Such wonderful tweaks are not limited to just my editor, and could be brought over to my day to day use of my laptop itself, as I found native options within the Mac settings to rebind hotkeys for common commands, opening me to a whole new paradigm of navigating the desktop spaces in my laptop! It is really incredible how much can be done without my hands leaving the home row.
+>Fun fact: Emacs key bindings are natively available on macOS!
 
-I needed to configure Emacs for myself.
-### [Pixa Emacs](https://github.com/Pixalesce/Pixa_Emacs)
-Following SystemCrafters's [Emacs from Scratch](https://systemcrafters.net/emacs-from-scratch/), I gradually built up my configuration, learning the invaluable skill of reading documentation, and building my patience as I struggled with [Emacs Lisp](https://www.emacswiki.org/emacs/LearnEmacsLisp), a dialect of the [Lisp](https://lisp-lang.org/) programming language, and my lack of experience in configuring an editor. It look me the better part of two weeks, but after trawling through the depths of [Reddit](https://www.reddit.com/r/emacs/) and [Emacs Stack Exchange](https://emacs.stackexchange.com/), Pixa Emacs finally reached infancy. I had all the basics of a text editor, from syntax highlighting to LSP, and even an incredibly useful [Git](https://git-scm.com/) interface via [Magit](https://github.com/magit/magit). I was incredibly pleased.
-![Emacs Dashboard](./screenshots/emacs_dashboard.png)
-*Emacs dashboard*
-![Emacs Editor](./screenshots/emacs_editor.png)
-*Editing files in Emacs*
+![Keyboard Options](../screenshots/macos-options.png)
+*Keyboard options on MacBook*
 
-As any Emacs user, I then spent the rest of the month exploring [Org Mode](https://orgmode.org/), a note taking system within Emacs itself. Together with [Org-babel](https://orgmode.org/worg/org-contrib/babel/), I could write my notes for school with executable code blocks, a functionality that not even [Notion](https://www.notion.so/) provides. The fact that I could write code my Org notes and have them extracted out into another code file via [Org-babel-tangle](https://orgmode.org/manual/Extracting-Source-Code.html) absolutely blew me away. I thought that I had the epitome of text editors under my fingertips, and anything was possible if I put in the effort to learn how to extend Emacs, and even had an entire roadmap written out for the features I would like to include in my Emacs configuration such as an [Org-Roam](https://www.orgroam.com/) [Zettelkasten](https://zettelkasten.de/) and an email client.
-![Org Mode](./screenshots/org_mode.png)
-*Emacs org mode*
->With Emacs, the sky is the limit for what you can do.
+### Challenges
+As with any other solution, there is nothing perfect.
+Through the past 18 months of using Neovim, I have hit multiple walls.
 
-At this point, I have used Emacs for over 2 months, and have gotten very comfortable with it. As I headed back to school, I was convinced that this tool at my fingertips would supercharge my learning experience and make school that much more fun. It was not to be. During my first web development class, I ran into a huge wall. [HTML](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) and [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) completion, including additional features such as highlighting of CSS colours, were not properly set up!
+#### Java
+The first roadblock I hit in this journey was in my Java course.
+After some initial tinkering, I found a working [jdtls](https://github.com/eclipse-jdtls/eclipse.jdt.ls) to be a working LSP, but felt that it was somewhat slow and finicky to configure.
+Well, it is not impossible, but it entailed a greater degree of complexity that I deemed worthwhile to configure my editor for a programming language that I might frequently use in the longer term.
+Furthermore, [JetBrains](https://www.jetbrains.com/) and did an incredible job with [IntelliJ](https://www.jetbrains.com/idea/), providing a superb developer experience out of the box, with many additional tooling to support Java development, making it easier for me to navigate the codebase and understand its methods.
+Cherry on top? The [IdeaVim](https://plugins.jetbrains.com/plugin/164-ideavim) plugin supports for most Vim motions and is really smooth to use! Not a sleight against Neovim, but I got everything I wanted with IntelliJ and more.
+(Neovim gotta take a back seat here)
 
-After some preliminary research, I realised that I didn't have a quick and easy way to do it with my current LSP configuration, or [Company mode](https://www.emacswiki.org/emacs/CompanyMode) in Emacs. Not having the time at this juncture to pour hours into working out a fix for this, I had to find another option, and I didn't want to go back to VS Code if I didn't need to. Not that VS Code isn't good, but there was no way for me to go back to it after experiencing the joy and freedom of customising my very own editor.
->VS Code is powerful, but unfriendly to configure
-## Vim ([Neovim](https://neovim.io/))
-Vim. Let's switch to Vim.
+#### Unity
+Similar to my experience in writing Java, developing a game in [Unity](https://unity.com/) during my internship shifted me away from a text editor, to more a traditional IDE -- JetBrains [Rider](https://www.jetbrains.com/rider/).
+Configuring Neovim to work with the complex C# ecosystem proved to be futile, as I tried tirelessly for various solutions that could get me to a reasonable place for development, but not only found that Unity's specific way of handling the file directory and then getting proper recognition and navigation of such a file structure in Neovim was difficult, but that the LSP for C# to interface with such a file structure was equally complicated.
+Once again, while not absolutely impossible to set up, there was little value to be gained in forcing the issue.
 
-Even while configuring Emacs, Vim was somehow always in the periphery, as proponents of these two editors make the case of each being the best editor ever. Considering that I was already using Vim motions in Emacs, I decided that it would be worth a shot and a relatively low barrier to give Vim a go. After some brief reading and research, I decided to download Neovim as it is written in [Lua](https://www.lua.org/), a general purpose embeddable scripting language, and could pay dividends in future over something like [vimscript](https://www.vim.org/vim90.php), which is specific to Vim. Furthermore, Neovim is much easier to configure, with a vibrant plugin ecosystem driven by the community and various plugin managers designed to ease people just like myself into configuring their editors.
+#### Collaboration
+An aspect of diving into Neovim that I failed to anticipate in the beginning was an increase in difficulty when collaborating with others, especially when it requires my using of a teammate's machine, or a teammate using my machine.
+Having changed not just key bindings on my laptop, but also keystrokes for some shortcuts, using another person's laptop takes greater cognitive awareness to recall the standard keys, all while making a many mistakes.
+(I use the Emacs binding `C-h` to delete the most recent character)
+The inverse is true when someone has to use my laptop, though that can be mitigated to a certain extent by having VS Code available.
 
-After browsing a few distributions such as [kickstart](https://github.com/nvim-lua/kickstart.nvim) and [LunarVim](https://www.lunarvim.org/), I decided to take a weekend and set up Neovim from the ground up. Fortunately for me, [ThePrimeagen](https://www.youtube.com/@ThePrimeagen) had the perfect video waiting -- [0 to LSP: Neovim RC From Scratch](https://www.youtube.com/watch?v=w7i4amO_zaE&pp=ygUIMCB0byBsc3A%3D). (His videos are also wonderful. Have been following him ever since.) The move to Neovim has brought me incredible joy. I'm not sure if it is simply a matter of perception, but using Vim motions inside Neovim feels so much smoother than inside Emacs or as emulated in VS Code. The built-in LSP client was also relatively simple to set up and use, thanks to [LSP Zero](https://github.com/VonHeikemen/lsp-zero.nvim) by [VonHeikemen](https://github.com/VonHeikemen) and [Mason](https://github.com/williamboman/mason.nvim) by [williamboman](https://github.com/williamboman).
+Thankfully, such events are not common place, and has not adversely affected my ability to contribute to a team project.
 
-As my usage of Neovim matured, I increasingly began to appreciate the productivity boost that it offers, and it has slowly become something that I am paying more attention to while planning and optimising my workflow. Gone are file trees, replaced by the fuzzy finding of [telescope](https://github.com/nvim-telescope/telescope-file-browser.nvim), allowing me to hop around my files at will. This has even spilled beyond the scope of Neovim into the way I navigate my file system in the terminal, using [fzf](https://github.com/junegunn/fzf) to fuzzy find my way to desired files or directories.
->jumping around files using telescope increases familiarity with a code base!
-## [iTerm2](https://iterm2.com/)
-Along with my movement into the terminal, I craved an enhanced experience there too. The default Macbook terminal is functional, but doesn't provide the breadth of customisability that I have grown so accustomed to. Drawing insight from [How To Make Your Boring Mac Terminal So Much Better](https://www.youtube.com/watch?v=CF1tMjvHDRA) by [Josean Martinez](https://www.youtube.com/@joseanmartinez), I installed iTerm2 and began tinkering. I customised the prompt, keybindings for managing multiple terminal instances, and shortcuts for various actions. It was glorious.
-![iTerm2 Aesthetic](./screenshots/iterm2.png)
-*iTerm2 look and feel*
-## [Alacritty](https://alacritty.org/)
-If there was one thing that iTerm lacked, it was the fact that it is a Mac-only application. As nice as it was to use, I kept wondering about what a similar set up would look like on Linux. My exploration for a preferred terminal emulator has begun. My search eventually boiled down to these two options -- [Kitty](https://github.com/kovidgoyal/kitty), and Alacritty. Both are highly configurable, runs on MacOS and Linux, and are GPU accelerated. (Kitty even has a graphics protocol allowing users to view images right from the terminal!) Yet, it was this feature richness that drew me over to Alacritty. It was sleek, minimal, and had only what I needed. Configuring Alacritty was also much simpler, as its fewer options meant a smaller config file.
-![Alacritty Aesthetic](./screenshots/alacritty.png)
-*Alacritty look and feel*
-## Terminal Multiplexing
-Unfortunately for me, the switch over to Alacritty meant that I no longer had built-in functionality of managing multiple terminal instances, resulting in me having to either (1) close Neovim, run my code, remember the any warnings or errors I'm getting, before reopening Neovim to make the necessary edits, or (2) open another instance of Alacritty as a separate window and navigate between the two instances with my mouse. Neither of these methods were intuitive, and left a sour taste as I had to take my hands off the keyboard just to perform an action as simple as moving to the neighbouring window, an action that I have gotten to comfortable with within Neovim via `<C-w>{hjkl}`.
+## The 2025 Neovim Configuration
+So, after 18 months and many minor tweaks to my editor settings, I did the most natural thing, and rewrote my configuration for Neovim.
+This time, I searched up Lua tutorials to gain a better grasp and understanding of the interface that I am using to make changes to the behaviour of my editor, and leaned more on internal and online documentation than gasping for videos and hoping someone had made a Reddit post on the specific problem that I was encountering or trying to solve.
+In this process, I learnt a great deal more about this amazing editor, including the fact that I can have multiple active configurations on my computer and access the correct one on start using `NVIM_APPNAME`.
+Knowing that I can either clone my current config to test potential changes or open a clean config to test another idea is so alluring, but I don't think it is something I'll fully utilise in the near future.
 
-Just as I thought that I had hit a dead end, I was introduced to [tmux](https://github.com/tmux/tmux) in [My Developer Workflow - How I use i3, tmux, and vim](https://www.youtube.com/watch?v=bdumjiHabhQ), another video by ThePrimeagen. My eyes were opened. Almost immediately, I downloaded tmux and exploring its features and quirks. Oh, how good if felt to be able to have a separate window with a new terminal instance that I could navigate to with just the keyboard! Not only that, having persistent terminal sessions was something I didn't know I needed, but is something I definitely cannot live without now.
-![tmux Aesthetic](./screenshots/tmux.png)
-*tmux look and feel*
-## Window Manager
-The beauty of the productivity mindset is that it permeates into every aspect of your workflow. At the point in time when I moved to use Alacritty as my terminal emulator, I was using [Rectangle](https://rectangleapp.com/) to power shortcuts for managing the size and position of windows on my screen, and was pretty much content with it. With a few keystrokes, I could resize my screen to half, or even a third or two thirds of my screen, and position it at will. However, it had a core functionality missing. I could not easily switch between windows by manner of keystrokes. It was an action that had become deeply ingrained in me by this point in time through my usage of Neovim and tmux, and it was sorely missed in my day to day use of my computer. I needed a gem to brighten up this space of my workflow.
+There was also this silly error that was rather annoying to trace, to which I found that I have not been exporting `$PATH` correctly in my `.zshenv` file that hasn't been touched for the longest time.
+Thought it was quite interesting that this mistake didn't affect my previous config, but I'm glad that I found out and learnt to properly append `$PATH` when adding in a new path..
 
-[Amethyst](https://ianyh.com/amethyst/), a tiling window manager was just what I needed. Not only is it free, it has the whole slew of features that I would expect from such an application. While it did take a bit of time to get used to, it has completely revolutionised my productivity on my computer as I not longer reach for the mouse to change windows, and instead have dedicated workspaces for various tasks which I can switch to with minimal keystrokes.
+My current study and area of focus for Neovim usage? [Quickfix](https://neovim.io/doc/user/quickfix.html)!
+
+## Embracing [Ghostty](https://ghostty.org/)
+Since using Neovim, the terminal emulator has been an area I've placed greater emphasis on.
+While I dare not say that I live in the terminal, the fact that it directly affects my experience in both programming and writing, it is vital that I get it right.
+Though my experience with Kitty and Alacritty are not bad by any means, Ghostty positioning itself as the best terminal emulator is really enticing and enough for me to give it a shot.
+For now, the experience has been really smooth, requiring minimal configuration required to get it to look and behave in the way that I want it to.
+![Ghostty](../screenshots/ghostty.png)
+*Ghostty look and feel*
+
+## [Raycast](https://www.raycast.com/)
+Thinking back, I find it difficult to understand how I have taken this long to download and start using Raycast.
+It has been such a game changer for the way I use my MacBook and certain workflows, giving me shortcuts to access and open applications, open saved links to commonly used sites, and manage my list of daily reminders.
+Truly it is more than just a drop in substitute for Spotlight!
+![Raycast](../screenshots/raycast.png)
+*Raycast look and feel*
+
 ## Closing Thoughts
-My journey over the past year has been a whirl and I have learnt an incredible amount about using my terminal to perform tasks and actions, while personalising CLI tools around a developer centric workflow based on the philosophy of simplicity and speed. An increased familiarity and comfort from within a terminal has also boosted my confidence as a developer, as I now feel closer to the machine that I am working with.  
-
-Now, I am reading [Practical Vim](https://pragprog.com/titles/dnvim2/practical-vim-second-edition/) by Drew Neil, and intend to check out his other book, [Modern Vim](https://pragprog.com/titles/modvim/modern-vim/) afterward to gain mastery of Neovim as I hope to give back to the community at some point in the future.
+Barring a major event that calls for a change in the way I use my laptop, I will probably never stop using Neovim.
+However, this should be my last article on this subject, as I seek to move on to other topics of interest that I want to dive in deeper and become an expert on.
+Till then, vim on!
 
 *This is not a sponsored article. This post is a chronicle of my own journey in developing my workflow. Any representations of persons or applications stated are based on my own personal opinion.*
