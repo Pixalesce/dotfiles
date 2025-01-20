@@ -20,7 +20,25 @@ return {
         nerd_font_variant = 'mono'
       },
 
-      signature = { enabled = true }
+      signature = { enabled = true },
+      sources = {
+        providers = {
+          snippets = {
+            opts = {
+              search_paths = { "~/.config/nvim/lua/config/plugins/snippets" },
+            },
+          },
+          lsp = {
+            opts = {},
+          },
+          buffer = {
+            opts = {},
+          },
+          path = {
+            opts = {},
+          },
+        },
+      }
     },
-  }
+  },
 }
