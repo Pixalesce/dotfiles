@@ -1,13 +1,11 @@
-return {
-  {
-    'stevearc/oil.nvim',
-    enabled = true,
-    ---@module 'oil'
-    ---@type oil.SetupOpts
-    opts = {},
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      require("oil").setup({
+vim.pack.add({
+    {
+        src = "https://github.com/stevearc/oil.nvim.git",
+        name = "oil"
+    }
+})
+
+require("oil").setup({
         default_file_explorer = true, -- Set to false if you still want to use netrw.
         -- Id is automatically added at the beginning, and name at the end
         -- See :help oil-columns
@@ -126,6 +124,7 @@ return {
             winblend = 0,
           },
         },
+
         -- Configuration for the floating progress window
         progress = {
           max_width = 0.9,
@@ -139,12 +138,7 @@ return {
           win_options = {
             winblend = 0,
           },
-        },
+        }
+})
 
-      })
-
-      -- set keymap to open oil buffer
-      vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-    end
-  }
-}
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
