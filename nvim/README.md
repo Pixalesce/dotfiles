@@ -22,7 +22,7 @@ go install golang.org/x/tools/gopls@latest
 cargo install --locked tree-sitter-cli
 
 # Formatters Installation
-brew install ruff black stylua biome taplo
+brew install ruff black stylua biome taplo prettierd
 go install golang.org/x/tools/cmd/goimports@latest
 ```
 
