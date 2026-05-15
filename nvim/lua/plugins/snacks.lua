@@ -8,10 +8,35 @@ vim.pack.add({
 local Snacks = require("snacks")
 
 Snacks.setup({
+	layout = {
+		preset = "default",
+	},
 	gh = { enabled = true },
 	git = { enabled = true },
 	gitbrowse = { enabled = true },
 	lazygit = { enabled = true },
+	picker = {
+		sources = {
+			files = {
+				hidden = true,
+				ignored = false,
+			},
+			explorer = {
+				hidden = true,
+				ignored = false,
+			},
+		},
+		win = {
+			input = {
+				keys = {
+					["<c-b>"] = { "list_scroll_up", mode = { "i", "n" } },
+					["<c-f>"] = { "list_scroll_down", mode = { "i", "n" } },
+					["<c-d>"] = { "preview_scroll_down", mode = { "i", "n" } },
+					["<c-u>"] = { "preview_scroll_up", mode = { "i", "n" } },
+				},
+			},
+		},
+	},
 })
 
 local keymaps = {
@@ -131,7 +156,7 @@ local keymaps = {
 		desc = "Grep",
 	},
 	{
-		"<leader>fc",
+		"<leader>sc",
 		function()
 			Snacks.picker.command_history()
 		end,

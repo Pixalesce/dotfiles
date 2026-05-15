@@ -104,6 +104,6 @@ vim.filetype.add({
 	},
 	pattern = {
 		["[jt]sconfig.*.json"] = "jsonc",
-		["%.env%.[%w_.-]+"] = "dotenv",
+		["*.env%.[%w_.-]+"] = "dotenv",
 	},
 })

@@ -27,7 +27,7 @@ require("gitsigns").setup({
 			vim.keymap.set(mode, lhs, rhs, { buffer = buffer, desc = desc })
 		end
 
-		map("n", "]h", function()
+		map("n", "]]", function()
 			if vim.wo.diff then
 				vim.cmd.normal({ "]c", bang = true })
 			else
@@ -35,7 +35,7 @@ require("gitsigns").setup({
 			end
 		end, "Next Hunk")
 
-		map("n", "[h", function()
+		map("n", "[[", function()
 			if vim.wo.diff then
 				vim.cmd.normal({ "[c", bang = true })
 			else
@@ -43,11 +43,11 @@ require("gitsigns").setup({
 			end
 		end, "Prev Hunk")
 
-		map("n", "]H", function()
+		map("n", "]}", function()
 			gs.nav_hunk("last")
 		end, "Last Hunk")
 
-		map("n", "[H", function()
+		map("n", "[{", function()
 			gs.nav_hunk("first")
 		end, "First Hunk")
 
